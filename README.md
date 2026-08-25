@@ -1,7 +1,11 @@
 # Urban Logistics Data Platform
 
-A compact, runnable data-engineering reference built entirely with generated
-data. It demonstrates deterministic event generation, idempotent ingestion,
+Operational analytics gets difficult when the same event can arrive twice, change
+later, or mean something different under the policy that was active at event time. I
+built this compact, runnable reference to make those problems inspectable without
+exposing a production system.
+
+The lab uses generated data and demonstrates deterministic event generation, idempotent ingestion,
 version-aware staging, analytical marts, data-quality contracts, ledger
 reconciliation, geospatial plausibility checks, and switchback analysis.
 
@@ -69,7 +73,8 @@ delivery outcomes       ledger checks       switchback state
 
 Read [the architecture](docs/ARCHITECTURE.md), [the data contract](docs/DATA_CONTRACT.md),
 [the public-safety policy](PUBLIC_SAFETY.md), [the limitations](LIMITATIONS.md),
-and [the case-study map](docs/case-studies/INDEX.md) for the design rationale.
+[the workflow catalog](docs/WORKFLOW_CATALOG.md), and
+[the compact case-study map](docs/case-studies/INDEX.md) for the design rationale.
 
 ## Repository layout
 

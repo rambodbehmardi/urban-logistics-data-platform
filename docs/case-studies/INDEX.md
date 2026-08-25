@@ -5,6 +5,9 @@ single synthetic vertical slice. Each case below is a public abstraction, not
 a renamed copy of private code. No operational query, entity name, location,
 policy value, or result was transferred.
 
+For the decision question, end-to-end flow, guardrail, and evidence boundary behind
+each row, read the [workflow and analysis catalog](../WORKFLOW_CATALOG.md).
+
 | Public case study | Safe proof in this repository |
 |---|---|
 | Area-shift policy impact | Time-varying state and outcome marts |
