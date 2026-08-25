@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urban-logistics-data-platform"
+version = "0.1.0"
+description = "Synthetic event pipeline for reliable urban-logistics analytics"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Rambod Behmardi Kalantari"}
+]
+dependencies = []
+
+[project.scripts]
+urban-data-platform = "urban_data_platform.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+urban_data_platform = ["sql/*.sql"]
