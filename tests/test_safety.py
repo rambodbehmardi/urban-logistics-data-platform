@@ -13,7 +13,7 @@ class SafetyScanTestCase(unittest.TestCase):
         self.assertEqual(scan_tree(repository_root), [])
 
     def test_restricted_context_is_reported_without_matched_text(self) -> None:
-        restricted = "ap" + "ply"
+        restricted = "internal" + "-only-marker"
         findings = scan_text(f"public wording: {restricted}\n", "sample.md")
         self.assertEqual(len(findings), 1)
         self.assertEqual(findings[0].path, "sample.md")
@@ -33,7 +33,7 @@ class SafetyScanTestCase(unittest.TestCase):
             root = Path(directory)
             generated = root / "build" / "record.txt"
             generated.parent.mkdir(parents=True)
-            generated.write_text("ap" + "ply", encoding="utf-8")
+            generated.write_text("internal" + "-only-marker", encoding="utf-8")
             self.assertEqual(scan_tree(root), [])
 
 

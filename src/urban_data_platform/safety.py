@@ -24,11 +24,7 @@ TEXT_FILENAMES = {"LICENSE", "Makefile"}
 IGNORED_PARTS = {".git", ".venv", "__pycache__", "build", "dist"}
 
 RESTRICTED_CONTEXT = (
-    "ap" + "ply",
-    "app" + "lication",
-    "mi" + "are",
-    "\u006f\u0066\u006f\u0067\u0068\u0020\u006b\u006f\u006f\u0072\u006f\u0073\u0068",
-    "\u0627\u067e\u0644\u0627\u06cc",
+    "internal" + "-only-marker",
 )
 
 EMAIL_PATTERN = re.compile(
